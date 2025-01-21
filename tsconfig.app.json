@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* Modules */
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "types": ["vite/client"],
+
+    /* Language and environment */
+    "useDefineForClassFields": true,
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "target": "es2020",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+
+    /* Base options */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "allowJs": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noEmit": true,
+    "declaration": true // if you are building for a library
+  },
+  "include": [
+    "src",
+    "unimported.d.ts"
+    //  ".react-router/types/**/*"
+  ],
+  "exclude": [
+    "build"
+    //  ".react-router"
+  ]
+}
