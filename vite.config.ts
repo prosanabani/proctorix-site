@@ -17,6 +17,11 @@ import Unimport from 'unimport/unplugin';
 export default defineConfig(async () => {
   return {
     base: '/',
+    resolve: {
+      alias: {
+        '@': '/app',
+      },
+    },
     plugins: [
       react({
         babel: {

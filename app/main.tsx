@@ -6,10 +6,7 @@ import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 // import 'primereact/resources/themes/lara-dark-blue/theme.css';
 // import 'primereact/resources/themes/lara-light-blue/theme.css';
-import queryClient from './config/queryClient';
 import { I18nProvider } from '@lingui/react';
-import { QueryClientProvider } from '@tanstack/react-query';
-// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ClickToComponent } from 'click-to-react-component';
 // import 'primereact/resources/themes/lara-dark-purple/theme.css'
 import { type APIOptions, PrimeReactProvider } from 'primereact/api';
@@ -34,15 +31,11 @@ const value: Partial<APIOptions> = {
 
 createRoot(document.querySelector('#root') as Element).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <I18nProvider i18n={i18n}>
-        <PrimeReactProvider value={value}>
-          <RouterProvider fallbackElement={<Loader />} router={router} />
-          <OEMSToast />
-          <ClickToComponent />
-        </PrimeReactProvider>
-      </I18nProvider>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-    </QueryClientProvider>
+    <I18nProvider i18n={i18n}>
+      <PrimeReactProvider value={value}>
+        <RouterProvider fallbackElement={<Loader />} router={router} />
+        <ClickToComponent />
+      </PrimeReactProvider>
+    </I18nProvider>
   </StrictMode>
 );
