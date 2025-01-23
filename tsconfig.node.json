@@ -1,36 +1,11 @@
 {
   "compilerOptions": {
-    /* Projects */
     "composite": true,
-    "tsBuildInfoFile": "node_modules/.cache/tsconfig.node.tsbuildinfo",
-
-    /* Language and Environment */
-    "target": "es2020",
-    "lib": ["es2020"],
-
-    /* Modules */
-    "module": "ESNext",
-    "allowImportingTsExtensions": true,
-    "moduleDetection": "force",
-
-    /* Bundler Mode */
-    "moduleResolution": "bundler",
-
-    /* Completeness */
     "skipLibCheck": true,
-
-    /* InterLop constraints */
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-
-    /* emit */
-    "noEmit": true,
-
-    /* Strictness */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "eslint.config.js"]
+  "include": ["vite.config.ts"]
 }

@@ -11,9 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+*.d.ts
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-
-.react-router
-build
+.env
+auto-imports.d.ts
+.eslintrc-auto-import.json
+app/locales/*.js
